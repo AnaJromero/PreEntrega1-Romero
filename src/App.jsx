@@ -1,13 +1,16 @@
-import Navbar from "./Components.jsx/Navbar"
+import React from 'react'
+import Navbar from './Components/Navbar'
+import ItemListContainer from './Components/ItemListContainer'
 
 const App = () => {
-
-  let nombre = "Ana" 
   return (
     <>
-    <h1>Bienvenida{nombre}</h1>
+      <Navbar/>
+      <ItemListContainer
+      greeting="Bienvenidos a mi tienda"
+      />
     </>
   )
 }
 
-export default App  
+export default App
