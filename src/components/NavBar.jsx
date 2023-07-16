@@ -1,15 +1,16 @@
 import React from 'react';
 import { Menu, MenuButton, Button, MenuList, MenuItem, Flex, Spacer, Box } from '@chakra-ui/react'
-import {ChevronDownIcon} from '@chakra-ui/icons';
+import {ChevronDownIcon, } from '@chakra-ui/icons';
 import CartWidget from './CartWidget'
+
 
 
 const Navbar = () => {
 
   return (
 
-    <Flex>
-      <Box p="2" bg="yellow" color="Black">
+    <Flex className='containerNavBar'>
+      <Box p="2" bg="yellow" color="Black" >
       <Menu>
         <MenuButton as={Button} rightIcon={<ChevronDownIcon />}>
           Menu
@@ -23,9 +24,9 @@ const Navbar = () => {
       </Menu>
       </Box>
 
-      <Spacer />
+      <Spacer/>
       <Box p="2" bg="yellow" color="Black">
-        <h1>YelloTruck</h1>
+        <h1>YellowTruck</h1>
       </Box>
 
       <Spacer />
