@@ -1,6 +1,8 @@
 .containerNavBar{
     padding: 100wv;
     background-color: yellow;
+    padding-left: 1rem;
+    padding-top: 0.5rem;
 }
 
 .mensaje{
@@ -11,4 +13,17 @@
 
 h1{
     font-family:cursive;
+}
+
+.containerCarrito{
+    padding-right: 1.5rem;
+    padding-top: 0.5rem;
+}
+
+.boton{
+    background-color: black;
+}
+
+.menu{
+    color: white;
 }
