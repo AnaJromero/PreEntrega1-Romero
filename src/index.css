@@ -1,13 +1,12 @@
 .containerNavBar{
-    padding: 100wv;
     background-color: yellow;
     padding-left: 1rem;
-    padding-top: 0.5rem;
+    border: 2px solid black;
+    border-radius: 2px;
 }
 
 .mensaje{
     font-family:cursive;
-    text-align: center;
     padding-top: 8rem;
 }
 
@@ -16,14 +15,23 @@ h1{
 }
 
 .containerCarrito{
-    padding-right: 1.5rem;
-    padding-top: 0.5rem;
+    padding-right: 2rem;
+    margin-top: 2rem;
 }
 
-.boton{
-    background-color: black;
+.logo{
+    width: 12vw;
+    height: 13vh;    
 }
 
 .menu{
-    color: white;
+    margin-top: 1.5rem;
+
 }
+ 
+.mensaje{
+    border: 1px double black;
+    margin-top: 5rem;
+    padding: 1.5rem;
+    text-align: center;
+} 
