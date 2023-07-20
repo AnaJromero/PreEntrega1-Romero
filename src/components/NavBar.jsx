@@ -35,6 +35,7 @@ const Navbar = () => {
       <Box>
         <CartWidget/>
       </Box>
+
     </Flex>
   )
 }
