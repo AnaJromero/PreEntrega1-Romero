@@ -11,7 +11,7 @@ const CartWidget = () => {
       </svg>
       </Box>
       <Box>
-        <p>5</p>
+        <p>10</p>
       </Box>  
     </Flex>
   )
