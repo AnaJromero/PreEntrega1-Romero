@@ -1,0 +1,49 @@
+[
+    {   
+        "id":1,
+        "titulo": "Papas Yellow",
+        "imagen": "",
+        "detalle": "Hermosos Collares para todas tus mascotas y de todos los colores",
+        "precio": 12000 
+    },
+
+    {
+        "id":2,
+        "titulo": "ARNES",
+        "imagen": "",
+        "detalle":"Pecheras de todos los tamaños para los consentidos del hogar",
+        "precio": 30150
+    },
+
+    {
+        "id":3,
+        "titulo": "SNACK",
+        "imagen": "",
+        "detalle":"Los mas deliciosos y nutritivos snacks para premiar a los consentidos",
+        "precio": 1990
+    },
+
+    {
+        "id":4,
+        "titulo": "CANIL",
+        "imagen": "",
+        "detalle": "Canil para la seguridad de tu mascota en los viajes",
+        "precio": 22264
+    },
+
+    {
+        "id":5,
+        "titulo": "BOZAL",
+        "imagen": "",
+        "detalle":"Aunque no nos gusten,a veces son necesarios",
+        "precio": 19990
+    },
+
+    {
+        "id":6,
+        "titulo": "JUGUETES",
+        "imagen": "",
+        "detalle": "Hermosos Collares para todas tus mascotas y de todos los colores",
+        "precio": 10675
+    }
+]

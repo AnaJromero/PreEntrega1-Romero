@@ -5,11 +5,6 @@
     border-radius: 2px;
 }
 
-.mensaje{
-    font-family:cursive;
-    padding-top: 8rem;
-}
-
 h1{
     font-family:cursive;
 }
@@ -28,10 +23,3 @@ h1{
     margin-top: 1.5rem;
 
 }
- 
-.mensaje{
-    border: 1px double black;
-    margin-top: 5rem;
-    padding: 1.5rem;
-    text-align: center;
-} 

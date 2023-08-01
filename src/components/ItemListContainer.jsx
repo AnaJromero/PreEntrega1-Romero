@@ -1,12 +1,29 @@
-import React from 'react'
-import { Container } from '@chakra-ui/react'
+import { useEffect, useState } from "react";
+import data from "../data/productos.json";
+import ItemList from "c:/Users/ana_j/Desktop/YellowTruck/src/components/ItemList.jsx";
 
-const ItemListContainer = ({greeting}) => {
+const ItemListContainer = ({}) => {
+
+  const [productos,setProductos] = useState([]);
+
+  const llamarProductos = () => {
+    return new Promise((resolve, reject) => {
+      resolve(data)
+    })
+  }
+
+    useEffect(() => {
+      llamarProductos()
+        .then((res) => {
+          setProductos(res);
+        })
+    },[])
+
   return (
-    <Container className='mensaje' maxW='md' bg='#faebd7' color='black'>
-      <p>{greeting}</p>
-    </Container>
+    <div>
+      <ItemList productos={productos}/>
+    </div>
   )
-}
+};
 
 export default ItemListContainer
