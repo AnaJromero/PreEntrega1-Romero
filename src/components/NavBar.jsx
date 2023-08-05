@@ -1,7 +1,7 @@
-import React from 'react';
-import { Menu, MenuButton, MenuList, MenuItem, IconButton, Flex, Spacer, Box, Image } from '@chakra-ui/react'
+import { Menu, MenuButton, MenuList, MenuItem, IconButton, Flex, Spacer, Box } from '@chakra-ui/react'
 import { HamburgerIcon } from '@chakra-ui/icons';
 import CartWidget from './CartWidget'
+import { Link } from 'react-router-dom'
 
 
 const Navbar = () => {
@@ -19,21 +19,29 @@ const Navbar = () => {
           backgroundColor='#D9D9D9'
         />
         <MenuList>
-          <MenuItem>Inicio</MenuItem>
-          <MenuItem>Entradas</MenuItem>
-          <MenuItem>Hamburguesas</MenuItem>
-          <MenuItem>Bebidas</MenuItem>
-          <MenuItem>Registro o Iniciar Sesiòn</MenuItem>
+          <MenuItem>
+            <Link to={`/category/${'cat1'}`}>
+              Entrada
+            </Link>
+          </MenuItem>
+          <MenuItem>
+            <Link to={`/category/${'cat2'}`}>
+              Hamburguesas 
+            </Link>
+          </MenuItem>
         </MenuList>
       </Menu>
       </Box>
-
       <Spacer/>
-       <Image className='logo' src="./src/assets/foodtruck1.jpg"/>
-      <Spacer />
+
+      <Link to={"/"}>
+        <img className='logo'/*  src="./src/assets/foodtruck1.jpg" *//>
+      </Link>
 
       <Box>
-        <CartWidget/>
+        <Link to={"/cart"}>
+          <CartWidget/>
+        </Link>
       </Box>
 
     </Flex>

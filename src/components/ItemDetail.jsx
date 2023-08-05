@@ -1,12 +1,11 @@
 import { Heading, Card, CardHeader, CardBody, CardFooter, Text, Center} from '@chakra-ui/react';
-import React from 'react'
-import { useParams, Link } from 'react-router-dom'
+import { useParams } from 'react-router-dom'
 import ItemCount from './ItemCount';
 
 const ItemDetail = ({ productos }) => {
     const { id } = useParams();
 
-    const filteredProducts = productos.filter((producto) => producto.id === id)
+    const filteredProducts = productos.filter((producto) => producto.id == id)
   return (
     <div>
         {filteredProducts.map((p) => {
@@ -18,7 +17,7 @@ const ItemDetail = ({ productos }) => {
                                 <Heading size="md">{p.nombre}</Heading>
                             </CardHeader>
                             <CardBody>
-                                <Text>{p.descripcion}</Text>
+                                <Text>{p.description}</Text>
                                 <Text>{p.category}</Text>
                             </CardBody>
                             <CardFooter>

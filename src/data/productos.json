@@ -1,49 +1,82 @@
 [
     {   
         "id":1,
+        "categoria": "entrada",
         "titulo": "Papas Yellow",
         "imagen": "",
-        "detalle": "Hermosos Collares para todas tus mascotas y de todos los colores",
-        "precio": 12000 
+        "detalle": "Ración de papas fritas grande con toppings de cheddar fundido y crujiente bacon",
+        "precio": 7.990
     },
 
     {
         "id":2,
-        "titulo": "ARNES",
+        "categoria": "entrada",
+        "titulo": "Aros de Cebolla",
         "imagen": "",
-        "detalle":"Pecheras de todos los tamaños para los consentidos del hogar",
-        "precio": 30150
+        "detalle":" Aros de cebolla bañados en salsa de queso cheddar",
+        "precio": 5.990
     },
 
     {
         "id":3,
-        "titulo": "SNACK",
+        "categoria": "entrada",
+        "titulo": "Tequeños",
         "imagen": "",
-        "detalle":"Los mas deliciosos y nutritivos snacks para premiar a los consentidos",
-        "precio": 1990
+        "detalle": "Unidades de tequeños acompañados de su respectiva salsa tártara",
+        "precio": 6.990
     },
 
     {
         "id":4,
-        "titulo": "CANIL",
+        "categoria": "hamburguesas",
+        "titulo": "All In Burguer",
         "imagen": "",
-        "detalle": "Canil para la seguridad de tu mascota en los viajes",
-        "precio": 22264
+        "detalle": "180gr de carne de vacuno y chuleta ahumada en pan brioche color negro , lechuga cebolla caramelizada y salsa especial de la casa",
+        "precio": 13.990
     },
 
     {
         "id":5,
-        "titulo": "BOZAL",
+        "categoria": "hamburguesas",
+        "titulo": "Black Burguer",
         "imagen": "",
-        "detalle":"Aunque no nos gusten,a veces son necesarios",
-        "precio": 19990
+        "detalle": "Hamburguesa tradicional de 180gr de carne de vacuno en pan brioche color negro , lechuga, tomate, cebolla y salsa especial de la casa",
+        "precio": 6.990
     },
 
     {
         "id":6,
-        "titulo": "JUGUETES",
+        "categoria": "hamburguesas",
+        "titulo": "Yellow Grill",
         "imagen": "",
-        "detalle": "Hermosos Collares para todas tus mascotas y de todos los colores",
-        "precio": 10675
+        "detalle": "Deliciosa Salchicha al gril con papas hilos, aros de cebolla, queso y salsa especial de la casa",
+        "precio": 3.500
+    },
+
+    {
+        "id":7,
+        "categoria": "hamburguesas",
+        "titulo": "Yellow Burguer",
+        "imagen": "",
+        "detalle": "180gr de carne de vacuno con tocino en pan brioche color negro ,cebolla caramelizada y salsa especial de la casa",
+        "precio": 8.990
+    },
+
+    {
+        "id":8,
+        "categoria": "hamburguesas",
+        "titulo": "Bacon Burguer",
+        "imagen": "",
+        "detalle": "180gr de carne de vacuno con aros de cebolla frito y extra extra tocino en pan brioche color negro salsa especial de la casa y salsa especial bbq",
+        "precio": 8.990
+    },
+
+    {
+        "id":9,
+        "categoria": "hamburguesas",
+        "titulo": "Yellow Burguer Doble",
+        "imagen": "",
+        "detalle": "360gr de carne de vacuno con tocino en pan brioche color negro ,cebolla caramelizada y salsa especial de la casa",
+        "precio": 11.990
     }
 ]
