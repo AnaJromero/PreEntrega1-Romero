@@ -20,12 +20,12 @@ const Navbar = () => {
         />
         <MenuList>
           <MenuItem>
-            <Link to={`/category/${'cat1'}`}>
+            <Link to={`/categoria/${'entrada'}`}>
               Entrada
             </Link>
           </MenuItem>
           <MenuItem>
-            <Link to={`/category/${'cat2'}`}>
+            <Link to={`/categoria/${'hamburguesas'}`}>
               Hamburguesas 
             </Link>
           </MenuItem>

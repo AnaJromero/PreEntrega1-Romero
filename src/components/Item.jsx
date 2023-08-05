@@ -1,7 +1,7 @@
 import { CardFooter, Card, CardBody,CardHeader, Text, Heading, Button } from "@chakra-ui/react"
 import { Link } from 'react-router-dom'
 
-const Item = ({ nombre, id, description, category }) => {
+const Item = ({ nombre, id, detalle, categoria }) => {
   return (
     <div>
         <Card>
@@ -9,8 +9,9 @@ const Item = ({ nombre, id, description, category }) => {
             <Heading>{nombre}</Heading>
           </CardHeader>
           <CardBody>
-            <Text>{description}</Text>
-            <Text>{category}</Text>
+            <Text>{nombre}</Text>
+            <Text>{detalle}</Text>
+            <Text>{categoria}</Text>
           </CardBody>
           <CardFooter>
             <Button>

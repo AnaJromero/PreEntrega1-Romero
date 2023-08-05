@@ -2,23 +2,23 @@ import { Heading, Card, CardHeader, CardBody, CardFooter, Text, Center} from '@c
 import { useParams } from 'react-router-dom'
 import ItemCount from './ItemCount';
 
-const ItemDetail = ({ productos }) => {
+const ItemDetail = ({ articulos }) => {
     const { id } = useParams();
 
-    const filteredProducts = productos.filter((producto) => producto.id == id)
+    const filtrarArt = articulos.filter((articulo) => articulo.id == id)
   return (
     <div>
-        {filteredProducts.map((p) => {
+        {filtrarArt.map((a) => {
             return (
-                <div key={p.id}>
+                <div key={a.id}>
                     <Center p="1rem">
                         <Card>
                             <CardHeader>
-                                <Heading size="md">{p.nombre}</Heading>
+                                <Heading size="md">{a.nombre}</Heading>
                             </CardHeader>
                             <CardBody>
-                                <Text>{p.description}</Text>
-                                <Text>{p.category}</Text>
+                                <Text>{a.detalle}</Text>
+                                <Text>{a.precio}</Text>
                             </CardBody>
                             <CardFooter>
                                 <ItemCount/>

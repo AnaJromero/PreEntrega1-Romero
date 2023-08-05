@@ -25,9 +25,7 @@ const ItemCount = () => {
   return (
     <>
         <Button onClick={quitarItem}>-</Button>
-        <Spacer/>
         <p>{contador}</p>
-        <Spacer/>
         <Button onClick={agregarItem}>+</Button>
         <Button onClick={vaciarCarrito}>Eliminar</Button>
     </> 
