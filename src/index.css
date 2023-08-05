@@ -10,16 +10,24 @@ h1{
 }
 
 .containerCarrito{
-    padding-right: 2rem;
+    padding-right: 3rem;
     margin-top: 2rem;
 }
 
 .logo{
     width: 12vw;
-    height: 13vh;    
+    height: 13vh; 
+    margin-right:50rem ;
 }
 
 .menu{
     margin-top: 1.5rem;
 
+}
+
+.mensaje{
+    justify-content: center;
+    align-items: center;
+    display:flex;
+    margin-top: 10%;
 }

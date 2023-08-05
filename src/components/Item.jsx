@@ -1,15 +1,15 @@
 import { CardFooter, Card, CardBody,CardHeader, Text, Heading, Button } from "@chakra-ui/react"
 import { Link } from 'react-router-dom'
 
-const Item = ({ nombre, id, detalle, categoria }) => {
+const Item = ({ titulo, id, detalle, categoria }) => {
   return (
     <div>
         <Card>
           <CardHeader>
-            <Heading>{nombre}</Heading>
+            <Heading>{titulo}</Heading>
           </CardHeader>
           <CardBody>
-            <Text>{nombre}</Text>
+            <Text>{titulo}</Text>
             <Text>{detalle}</Text>
             <Text>{categoria}</Text>
           </CardBody>

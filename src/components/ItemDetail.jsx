@@ -14,7 +14,7 @@ const ItemDetail = ({ articulos }) => {
                     <Center p="1rem">
                         <Card>
                             <CardHeader>
-                                <Heading size="md">{a.nombre}</Heading>
+                                <Heading size="md">{a.titulo}</Heading>
                             </CardHeader>
                             <CardBody>
                                 <Text>{a.detalle}</Text>

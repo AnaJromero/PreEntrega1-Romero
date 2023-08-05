@@ -1,8 +1,7 @@
 import { Menu, MenuButton, MenuList, MenuItem, IconButton, Flex, Spacer, Box } from '@chakra-ui/react'
 import { HamburgerIcon } from '@chakra-ui/icons';
 import CartWidget from './CartWidget'
-import { Link } from 'react-router-dom'
-
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
 
@@ -34,10 +33,12 @@ const Navbar = () => {
       </Box>
       <Spacer/>
 
-      <Link to={"/"}>
-        <img className='logo'/*  src="./src/assets/foodtruck1.jpg" *//>
-      </Link>
-
+      <Spacer>
+        <Link to={"/"}>
+              <img className='logo'  src="./src/assets/foodtruck1.jpg" />
+        </Link>
+      </Spacer>
+      
       <Box>
         <Link to={"/cart"}>
           <CartWidget/>

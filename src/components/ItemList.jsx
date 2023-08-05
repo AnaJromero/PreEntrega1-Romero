@@ -8,7 +8,7 @@ const ItemList = ({articulos}) => {
                     <Item 
                         key={a.id} 
                         id={a.id}
-                        nombre ={a.nombre}
+                        titulo ={a.titulo}
                         detalle={a.detalle}
                         precio={a.precio}
                     />
