@@ -2,35 +2,36 @@ import { Heading, Card, CardHeader, CardBody, CardFooter, Text, Center} from '@c
 import { useParams } from 'react-router-dom'
 import ItemCount from './ItemCount';
 
-const ItemDetail = ({ articulos }) => {
+const ItemDetail = ({ item }) => {
     const { id } = useParams();
-
-    const filtrarArt = articulos.filter((articulo) => articulo.id == id)
-  return (
-    <div>
-        {filtrarArt.map((a) => {
-            return (
-                <div key={a.id}>
-                    <Center p="1rem">
-                        <Card>
-                            <CardHeader>
-                                <Heading size="md">{a.titulo}</Heading>
-                            </CardHeader>
-                            <CardBody>
-                                <Text>{a.detalle}</Text>
-                                <Text>{a.precio}</Text>
-                            </CardBody>
-                            <CardFooter>
-                                <ItemCount/>
-                            </CardFooter>
-                        </Card>
-                    </Center>
-                </div>
+    
+    const filtrarArt = item.filter((producto) => producto.id == id)
+    return (
+        <>
+            {filtrarArt.map((producto) => {
+                return (
+                    <div key={producto.id}>
+                        <Center p="1rem">
+                            <Card>
+                                <CardHeader>
+                                    <Heading size="md">{producto.titulo}</Heading>
+                                </CardHeader>
+                                <CardBody>
+                                    <img src={producto.imagen}/>
+                                    <Text>{producto.detalle}</Text>
+                                    <Text>Precio: ${producto.precio}</Text>
+                                </CardBody>
+                                <CardFooter>
+                                    <ItemCount/>
+                                </CardFooter>
+                            </Card>
+                        </Center>
+                    </div>
                 )
             })}
-    </div>
+        </>
     )
 }
 
 
-export default ItemDetail
+export default ItemDetail;

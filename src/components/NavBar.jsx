@@ -2,6 +2,7 @@ import { Menu, MenuButton, MenuList, MenuItem, IconButton, Flex, Spacer, Box } f
 import { HamburgerIcon } from '@chakra-ui/icons';
 import CartWidget from './CartWidget'
 import { Link } from 'react-router-dom';
+import Carrito from './Carrito';
 
 const Navbar = () => {
 
@@ -9,42 +10,53 @@ const Navbar = () => {
 
     <Flex className='containerNavBar'>
       <Box>
-      <Menu >
-        <MenuButton className='menu'
-          as={IconButton}
-          aria-label='Options'
-          icon={<HamburgerIcon />}
-          variant='outline'
-          backgroundColor='#D9D9D9'
-        />
-        <MenuList>
-          <MenuItem>
-            <Link to={`/categoria/${'entrada'}`}>
-              Entrada
-            </Link>
-          </MenuItem>
-          <MenuItem>
-            <Link to={`/categoria/${'hamburguesas'}`}>
-              Hamburguesas 
-            </Link>
-          </MenuItem>
-        </MenuList>
-      </Menu>
+        <Menu >
+          <MenuButton className='menu'
+            as={IconButton}
+            aria-label='Options'
+            icon={<HamburgerIcon />}
+            variant='outline'
+            backgroundColor='#D9D9D9'
+          />
+          <MenuList>
+            <MenuItem>
+              <Link to={"/"}>
+                Inicio
+              </Link>
+            </MenuItem>
+            <MenuItem>
+              <Link to={`/categoria/${'entrada'}`}>
+                Entrada
+              </Link>
+            </MenuItem>
+            <MenuItem>
+              <Link to={`/categoria/${'hamburguesas'}`}>
+                Hamburguesas 
+              </Link>
+            </MenuItem>
+            <MenuItem>
+              <Link to={`/contacto`}>
+                Contacto
+              </Link>
+            </MenuItem>
+          </MenuList>
+        </Menu>
       </Box>
-      <Spacer/>
 
       <Spacer>
-        <Link to={"/"}>
-              <img className='logo'  src="./src/assets/foodtruck1.jpg" />
-        </Link>
+        <Box>
+          <Link to={"/"}>
+                <img className='logo'  src="../src/assets/FoodTruck.jpg" />
+          </Link>
+        </Box>
+        
       </Spacer>
-      
-      <Box>
-        <Link to={"/cart"}>
-          <CartWidget/>
-        </Link>
-      </Box>
-
+        <Box> 
+          <Link to={"/cart"}>
+            <CartWidget/>
+          </Link>
+        </Box>
+         
     </Flex>
   )
 }

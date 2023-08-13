@@ -3,80 +3,89 @@
         "id":1,
         "categoria": "entrada",
         "titulo": "Papas Yellow",
-        "imagen": "",
+        "imagen": "../src/assets/PapasYellow.jpg",
         "detalle": "Ración de papas fritas grande con toppings de cheddar fundido y crujiente bacon",
-        "precio": 7.990
+        "precio": 7990,
+        "stock": 10
     },
 
     {
         "id":2,
         "categoria": "entrada",
         "titulo": "Aros de Cebolla",
-        "imagen": "",
+        "imagen": "../src/assets/ArosDeCebolla.jpg",
         "detalle":" Aros de cebolla bañados en salsa de queso cheddar",
-        "precio": 5.990
+        "precio": 5990,
+        "stock": 10
     },
 
     {
         "id":3,
         "categoria": "entrada",
         "titulo": "Tequeños",
-        "imagen": "",
+        "imagen": "../src/assets/Tequeños.jpg",
         "detalle": "Unidades de tequeños acompañados de su respectiva salsa tártara",
-        "precio": 6.990
+        "precio": 6990,
+        "stock": 10
     },
 
     {
         "id":4,
-        "categoria": "hamburguesas",
+        "categoria": "hamburguesas ",
         "titulo": "All In Burguer",
-        "imagen": "",
+        "imagen": "../src/assets/AllInBurguer.jpg",
         "detalle": "180gr de carne de vacuno y chuleta ahumada en pan brioche color negro , lechuga cebolla caramelizada y salsa especial de la casa",
-        "precio": 13.990
+        "precio": 13990,
+        "stock": 10
     },
 
     {
         "id":5,
         "categoria": "hamburguesas",
         "titulo": "Black Burguer",
-        "imagen": "",
+        "imagen": "../src/assets/BlackBurguer.jpg",
         "detalle": "Hamburguesa tradicional de 180gr de carne de vacuno en pan brioche color negro , lechuga, tomate, cebolla y salsa especial de la casa",
-        "precio": 6.990
+        "precio": 6990,
+        "stock": 10
     },
 
     {
         "id":6,
         "categoria": "hamburguesas",
         "titulo": "Yellow Grill",
-        "imagen": "",
+        "imagen": "../src/assets/YellowGrill.jpg",
         "detalle": "Deliciosa Salchicha al gril con papas hilos, aros de cebolla, queso y salsa especial de la casa",
-        "precio": 3.500
+        "precio": 3500,
+        "stock": 10
     },
 
     {
         "id":7,
         "categoria": "hamburguesas",
         "titulo": "Yellow Burguer",
-        "imagen": "",
+        "imagen": "../src/assets/YellowBurguer.jpg",
         "detalle": "180gr de carne de vacuno con tocino en pan brioche color negro ,cebolla caramelizada y salsa especial de la casa",
-        "precio": 8.990
+        "precio": 8990,
+        "stock": 10
     },
 
     {
         "id":8,
         "categoria": "hamburguesas",
         "titulo": "Bacon Burguer",
-        "imagen": "",
+        "imagen": "../src/assets/BaconBurguer.jpg",
         "detalle": "180gr de carne de vacuno con aros de cebolla frito y extra extra tocino en pan brioche color negro salsa especial de la casa y salsa especial bbq",
-        "precio": 8.990
+        "precio": 8990,
+        "stock": 10
     },
 
     {
         "id":9,
         "categoria": "hamburguesas",
         "titulo": "Yellow Burguer Doble",
-        "imagen": "",
+        "imagen": "../src/assets/YellowBurguerDoble.jpg",
         "detalle": "360gr de carne de vacuno con tocino en pan brioche color negro ,cebolla caramelizada y salsa especial de la casa",
-        "precio": 11.990
+        "precio": 11990,
+        "stock": 10
     }
 ]

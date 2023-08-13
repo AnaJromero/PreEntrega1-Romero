@@ -1,10 +1,9 @@
-import { Button, Spacer } from '@chakra-ui/react';
-import{useState} from 'react'
-
+import { Button } from '@chakra-ui/react';
+import{ useState } from 'react'
 
 const ItemCount = () => {
 
-  const [contador,setContador] = useState(0);
+  const [contador,setContador] = useState(1);
 
     const agregarItem = ()=>{
         if (contador < 10){
@@ -13,22 +12,25 @@ const ItemCount = () => {
     };
 
     const quitarItem =()=>{
-        if (contador > 0){
+        if (contador > 1){
             setContador(contador - 1)
         }
     };
 
-    const vaciarCarrito = ()=> {
-        setContador(0);
-    };
+    const agregarAlCarrito = ()=> {
+      setContador(1);
+  };
 
   return (
     <>
         <Button onClick={quitarItem}>-</Button>
         <p>{contador}</p>
         <Button onClick={agregarItem}>+</Button>
-        <Button onClick={vaciarCarrito}>Eliminar</Button>
+        <br/>
+        <Button onClick={agregarAlCarrito}>Agregar al Carrito</Button>
     </> 
+
   );
 }
-export default ItemCount
+
+export default ItemCount;

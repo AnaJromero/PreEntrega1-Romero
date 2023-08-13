@@ -31,3 +31,12 @@ h1{
     display:flex;
     margin-top: 10%;
 }
+
+/* body.chakra-ui-light{
+    background-color: black;
+} */
+
+.cardContainer{
+    width: 70%;
+    margin: 10rem;
+}

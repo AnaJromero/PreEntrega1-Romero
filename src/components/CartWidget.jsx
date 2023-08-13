@@ -1,8 +1,9 @@
 import { Flex, Box} from '@chakra-ui/react'
-import React from 'react'
+import { Link } from 'react-router-dom'
 
 
 const CartWidget = () => {
+
   return (
     <Flex className='containerCarrito'>
       <Box>
@@ -11,7 +12,7 @@ const CartWidget = () => {
       </svg>
       </Box>
       <Box>
-        <p>10</p>
+        <p></p>
       </Box>  
     </Flex>
   )
