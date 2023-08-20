@@ -1,10 +1,14 @@
 import { Flex, Box} from '@chakra-ui/react'
+import { useContext } from 'react'
 import { Link } from 'react-router-dom'
+import { CartContext } from '../contex/CartContext'
 
 
 const CartWidget = () => {
-
+  const { cantidadEnCarrito } = useContext(CartContext);
+  
   return (
+    <Link to={"/cart"}>
     <Flex className='containerCarrito'>
       <Box>
       <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" className="bi bi-bag-heart-fill" viewBox="0 0 16 16">
@@ -12,9 +16,10 @@ const CartWidget = () => {
       </svg>
       </Box>
       <Box>
-        <p></p>
+        <p>{cantidadEnCarrito()}</p>
       </Box>  
     </Flex>
+    </Link>
   )
 }
 

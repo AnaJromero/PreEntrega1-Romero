@@ -2,9 +2,9 @@ import { FormControl, FormLabel, Button, ButtonGroup, Input } from '@chakra-ui/r
 import { useForm } from "react-hook-form";
 
 const Contacto = () => {
-    const { handleSubmit } = useForm();
-    const enviar = () => {
-        console.log("Enviado");
+    const { register, handleSubmit } = useForm();
+    const enviar = (data) => {
+        console.log("data");
     }
  
     return (
@@ -12,17 +12,15 @@ const Contacto = () => {
     <div>
         <FormControl isRequired onSubmit={handleSubmit(enviar)}>
             <FormLabel>Nombre y Apellido</FormLabel>
-            <Input
-                type="text"
-                placeholder='Nombre y Apellido'
-                />
+            <Input type='text' placeholder='Ingresa tu nombre'{...register("nombre")}/>
         </FormControl>
         <FormControl>
             <FormLabel>Correo Electronico</FormLabel>
-            <Input 
-            type='email'
-            placeholder='Correo Electronico' 
-            />
+            <Input type='email' placeholder='Ingresa tu e-mail'{...register("email")}/>
+        </FormControl>
+        <FormControl>
+            <FormLabel>Telefono</FormLabel>
+            <Input type='phone' placeholder='Ingresa tu telefono'{...register("telefono")}/>
         </FormControl>
         <ButtonGroup variant='outline' spacing='6'>
             <Button colorScheme='blue'>Enviar</Button>

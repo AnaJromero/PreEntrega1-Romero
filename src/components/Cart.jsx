@@ -1,38 +1,41 @@
-import {
-  Alert,
-  AlertIcon,
-  AlertTitle,
-  AlertDescription,
-} from '@chakra-ui/react'
-import { Link } from 'react-router-dom'
+import { useContext } from 'react'
+import { CartContext } from '../contex/CartContext'
+import { Link } from 'react-router-dom';
 
 
 const Cart = () => {
+
+  const { carrito, precioTotal, vaciarCarrito } = useContext(CartContext);
+  const handleVaciar = () => {
+    vaciarCarrito();
+  }
   return (
-    <div className='mensaje'>
-    <Alert
-  status='error'
-  variant='subtle'
-  flexDirection='column'
-  alignItems='center'
-  justifyContent='center'
-  textAlign='center'
-  height='200px'
-  width='35%'
-  borderRadius="md"
->
-  <AlertIcon boxSize='40px' mr={0} />
-  <AlertTitle mt={4} mb={1} fontSize='lg'>
-    Tu carrito esta vacio
-  </AlertTitle>
-  <Link to={"/"}>
-  <AlertDescription maxWidth='sm'>
-    Ven a comprar ahora!
-  </AlertDescription>
-  </Link>
-</Alert>
-</div>
+    <>
+      <h1>Carrito</h1>
+
+    {
+      carrito.map((producto) => (
+        <div> 
+          <br/>
+          <h2>{producto.titulo}</h2>
+          <p>${producto.precio}</p>
+          <p>${producto.precio * producto.cantidad}</p>
+          <p>{producto.cantidad}</p>
+          <br/>
+        </div>
+      ))
+    }
+    {
+      carrito.length > 0 ?
+      <>
+        <h2>Precio Total: ${precioTotal()}</h2>
+        <button onClick={handleVaciar}>Vaciar</button>
+        <Link to="/checkout">Finalizar Compra</Link>
+      </>:
+        <h2>El Carrito Esta Vacio</h2>
+    }
+    </>
   )
 }
 
-export default Cart
+export default Cart;
