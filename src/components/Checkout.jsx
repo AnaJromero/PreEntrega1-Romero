@@ -5,7 +5,7 @@ import {useForm} from 'react-hook-form';
 
 const Checkout = () => {
     const [pedidoId, setPredidoId] = useState("");
-    const { carrito, precioTotal, vaciarCarrito} = useContext(CartContext);
+    const { carrito, setCarrito} = useContext(CartContext);
     const { register, handleSubmit} = useForm();
     const comprar = (data) => {
         const pedido = {
@@ -14,10 +14,10 @@ const Checkout = () => {
             total: precioTotal()
         }
         console.log(pedido);
-        const itemsCollection = collection(db, "pedidos");
+        const pedidoRef = collection(db, "pedido");
 
-        addDoc(itemsCollection,pedido)
-            .then((doc)=>{
+        addDoc(pedidoRef,pedido)
+            .then((doc) =>{
                 setPredidoId(doc.id);
                 vaciarCarrito();
         })

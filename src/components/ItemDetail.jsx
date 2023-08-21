@@ -1,7 +1,9 @@
 import { Heading, Card, CardHeader, CardBody, CardFooter, Text, Center} from '@chakra-ui/react';
 import ItemCount from './ItemCount';
+import { CartContext } from '../contex/CartContext';
 
 const ItemDetail = ( { item }) => {
+
     
     return (
         <div>

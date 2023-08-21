@@ -1,8 +1,14 @@
 import { Button } from '@chakra-ui/react';
 import{ useContext, useState } from 'react'
 import { CartContext } from '../contex/CartContext';
+                              
 
-const ItemCount = ({producto}) => {
+
+                                         /* ANA NO TOCAR ESTO YA FUNCIONA */
+
+
+                                         
+const ItemCount = ({item}) => {
 
   const { carrito, agregarAlCarrito } = useContext(CartContext);
   console.log(carrito);
@@ -27,7 +33,7 @@ const ItemCount = ({producto}) => {
         <p>{count}</p>
         <Button onClick={agregarItem}>+</Button>
         <br/>
-        <Button onClick={() => {agregarAlCarrito(producto, count)}}>Agregar al Carrito</Button>
+        <Button onClick={() => {agregarAlCarrito(item, count)}}>Agregar al Carrito</Button>
     </> 
 
   );
