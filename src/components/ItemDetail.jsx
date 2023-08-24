@@ -6,8 +6,8 @@ const ItemDetail = ( { item }) => {
 
     
     return (
-        <div>
-            <Center p="1rem">
+        <div key={item.id}>
+            <Center p="1rem" >
                 <Card>
                     <CardHeader>
                         <Heading size="md">{item.titulo}</Heading>

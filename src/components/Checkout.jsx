@@ -1,11 +1,11 @@
 import React, { useContext, useState } from 'react'
 import { CartContext } from '../contex/CartContext';
-import { addDoc, collection } from 'firebase/firestore';
+import { addDoc, collection, getFirestore } from 'firebase/firestore';
 import {useForm} from 'react-hook-form';
 
 const Checkout = () => {
     const [pedidoId, setPredidoId] = useState("");
-    const { carrito, setCarrito} = useContext(CartContext);
+    const { carrito, vaciarCarrito, precioTotal, eliminarDelCarrito} = useContext(CartContext);
     const { register, handleSubmit} = useForm();
     const comprar = (data) => {
         const pedido = {
@@ -14,14 +14,17 @@ const Checkout = () => {
             total: precioTotal()
         }
         console.log(pedido);
-        const pedidoRef = collection(db, "pedido");
+        const db = getFirestore()
+        const pedidoRef = collection(db, "Carrito");
 
         addDoc(pedidoRef,pedido)
             .then((doc) =>{
                 setPredidoId(doc.id);
                 vaciarCarrito();
+                console.log(setPredidoId);
         })
     }
+
 
     if (pedidoId){
         return(

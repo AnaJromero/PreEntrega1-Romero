@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 const Item = ( {producto} ) => {
   return (
     
-        <Card className="cardContainer" >
+        <Card className="cardContainer" key={producto.id}>
           <CardHeader>
             <Heading>{producto.titulo}</Heading>
           </CardHeader>

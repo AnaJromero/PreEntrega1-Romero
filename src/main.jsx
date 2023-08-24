@@ -22,7 +22,6 @@ const firebaseConfig = {
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 
-
 ReactDOM.createRoot(document.getElementById('root')).render(
 
     <ChakraProvider>

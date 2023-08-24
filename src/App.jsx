@@ -1,14 +1,11 @@
 import Navbar from './components/NavBar';
-import ItemListContainer from './Components/ItemListContainer';
+import ItemListContainer from 'c:/Users/ana_j/Desktop/YellowTruck/src/components/ItemListContainer.jsx';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import ItemDetailContainer from './components/ItemDetailContainer';
 import Contacto from './components/Contacto';
 import Cart from './components/Cart';
 import { CartProvider } from './contex/CartContext';
 import Checkout from './components/Checkout';
-
-
-
 
                                     /* ANA NO TOQUES LA APP YA QUEDO LISTA  */
 const App = () => {
