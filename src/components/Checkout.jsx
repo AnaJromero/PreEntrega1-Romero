@@ -11,6 +11,7 @@ const Checkout = () => {
         const pedido = {
             cliente: data,
             productos: carrito,
+            
             total: precioTotal()
         }
         console.log(pedido);

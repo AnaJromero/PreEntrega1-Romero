@@ -7,11 +7,44 @@
 
 h1{
     font-family:cursive;
+    font-size:x-large;
+    text-align: center;
+    margin: 5rem;
+}
+
+h2{
+    font-size: x-large;
+}
+
+.carrito-imagen{
+    width: 10%;
+    border-radius:1rem;
+}
+
+.container-carrito{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;  
+}
+
+.boton-eliminar{
+    color: red;
+    cursor: pointer;
 }
 
 .containerCarrito{
     padding-right: 3rem;
     margin-top: 2rem;
+}
+
+.carrito-total{
+    margin: 2rem;
+    padding: 2rem;
+    cursor: pointer;
+}
+
+.carrito-vaciar{
+    margin-right: 2rem;
 }
 
 .logo{
@@ -25,18 +58,24 @@ h1{
 
 }
 
-.mensaje{
-    justify-content: center;
-    align-items: center;
-    display:flex;
-    margin-top: 10%;
+.contenedor{
+    padding: 2rem;
+    margin: 1.5rem;
+    display:inline-block;
+    width: 30%;
+    margin-top: 5rem;
 }
 
-/* body.chakra-ui-light{
-    background-color: black;
-} */
+.imagen{
+    width: 60%;   
+    margin-left: 4rem;
+    border-radius: 1rem;
+}
 
-.cardContainer{
-    width: 70%;
-    margin: 10rem;
+.card-footer{
+    justify-content: space-around;
+}
+
+.titulo{
+    text-align: center;
 }

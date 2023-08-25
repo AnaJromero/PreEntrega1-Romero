@@ -1,4 +1,4 @@
-import { Menu, MenuButton, MenuList, MenuItem, IconButton, Flex, Spacer, Box } from '@chakra-ui/react'
+import { Menu, MenuButton, MenuList, MenuItem, IconButton, Flex, Spacer, Box, AbsoluteCenter } from '@chakra-ui/react'
 import { HamburgerIcon } from '@chakra-ui/icons';
 import CartWidget from './CartWidget'
 import { Link } from 'react-router-dom';
@@ -8,7 +8,7 @@ const Navbar = () => {
   return (
 
     <Flex className='containerNavBar'>
-      <Box>
+      <Box >
         <Menu >
           <MenuButton className='menu'
             as={IconButton}
@@ -43,10 +43,12 @@ const Navbar = () => {
       </Box>
 
       <Spacer>
-        <Box>
+        <Box position='relative' h='100px'>
+          <AbsoluteCenter>
           <Link to={"/"}>
                 <img className='logo'  src="../src/assets/FoodTruck.jpg" />
           </Link>
+          </AbsoluteCenter>
         </Box>
         
       </Spacer>
