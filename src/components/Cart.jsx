@@ -1,7 +1,7 @@
 import { useContext } from 'react'
 import { CartContext } from '../contex/CartContext'
 import { Link } from 'react-router-dom';
-import { Button } from '@chakra-ui/react';
+import { Button, Card } from '@chakra-ui/react';
 
 
 const Cart = () => {
@@ -45,8 +45,8 @@ const Cart = () => {
   <Link to="/checkout">Comprar</Link>
   </Button>
           
-        </div>:
-          <h2>El Carrito Esta Vacio</h2>
+        </div >:
+          <h2 className='container-form' >El Carrito Esta Vacio</h2>
     }
     </>
   )

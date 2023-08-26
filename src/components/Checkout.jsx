@@ -2,6 +2,8 @@ import React, { useContext, useState } from 'react'
 import { CartContext } from '../contex/CartContext';
 import { addDoc, collection, getFirestore } from 'firebase/firestore';
 import {useForm} from 'react-hook-form';
+import { Card } from 'react-bootstrap';
+import { Button, AlertIcon, Alert, AlertTitle, AlertDescription } from '@chakra-ui/react';
 
 const Checkout = () => {
     const [pedidoId, setPredidoId] = useState("");
@@ -11,7 +13,6 @@ const Checkout = () => {
         const pedido = {
             cliente: data,
             productos: carrito,
-            
             total: precioTotal()
         }
         console.log(pedido);
@@ -29,24 +30,53 @@ const Checkout = () => {
 
     if (pedidoId){
         return(
-            <div>
-                <h1>Muchas Gracias por tu compra</h1>
-                <p>Tu numero de pedido es: {pedidoId}</p>
-            </div>
+
+            <div   className='mensaje'>
+            <Alert
+          
+  status='success'
+  variant='subtle'
+  flexDirection='column'
+  justifyContent='center'
+  textAlign='center'
+  height='200px'
+  width='300px'
+>
+  <AlertIcon boxSize='40px' mr={0} />
+  <AlertTitle mt={4} mb={1} fontSize='lg'>
+    Su Compra fue exitosa
+  </AlertTitle>
+  <AlertDescription maxWidth='sm'>
+  Tu numero de pedido es: {pedidoId}
+  </AlertDescription>
+</Alert>
+</div>
+
         )
     }
   return (
-    <div>
+    <div className='contenedor-form' >
         <h1>Finalizar Compra</h1>
-        <form onSubmit={handleSubmit(comprar)}>
-            <input type='text' placeholder='Ingresa tu nombre'{...register("nombre")}/>
-            <input type='email' placeholder='Ingresa tu e-mail'{...register("email")}/>
-            <input type='phone' placeholder='Ingresa tu telefono'{...register("telefono")}/>
-
-            <button type='submit'>Comprar</button>
+        <form className='container-form' onSubmit={handleSubmit(comprar)}>
+            <div>
+                <input type='text' placeholder='Ingresa tu nombre'{...register("nombre")}/>
+            </div>
+            <div>
+                <input type='email' placeholder='Ingresa tu e-mail'{...register("email")}/>
+            </div>
+            <div>
+                <input type='password' placeholder='Ingresa tu Clave'{...register("clave")}/>
+            </div>
+            <Button className='comprar' colorScheme='teal' variant='solid' type='submit'>Comprar</Button>
         </form>
     </div>
   )
 }
 
 export default Checkout
+
+{/* <div className='container-form' >
+<h1>Gracias por tu compra</h1>
+<p>Tu numero de pedido es: </p>
+<p> {pedidoId}</p>
+</div> */}

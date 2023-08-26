@@ -50,7 +50,7 @@ h2{
 .logo{
     width: 12vw;
     height: 13vh; 
-    margin-right:50rem ;
+
 }
 
 .menu{
@@ -78,4 +78,46 @@ h2{
 
 .titulo{
     text-align: center;
+}
+
+.contenedor-form{
+    border: 1px solid;
+    width: 30%;
+    margin-left: 35%;
+    margin-top: 5%;
+    background-color: yellow;
+}
+
+.container-form{
+    text-align: center;
+}
+
+input{
+    margin: 1rem;
+    width: 70%;
+    text-align: center;
+
+}
+.mensaje{
+    margin-left: 40%;
+    margin-top: 10%;
+}
+
+.comprar{
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+.contador{
+    display: flex;
+    margin-left: 3.5rem;
+}
+
+.contador-numero{
+    margin: 1rem;
+
+}
+
+.agregar{
+    margin-left: 1rem;
 }
