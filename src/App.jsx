@@ -6,6 +6,7 @@ import Contacto from './components/Contacto';
 import Cart from './components/Cart';
 import { CartProvider } from './contex/CartContext';
 import Checkout from './components/Checkout';
+import Loader from './components/Loader';
 
                                     /* ANA NO TOQUES LA APP YA QUEDO LISTA  */
 const App = () => {
@@ -25,7 +26,7 @@ const App = () => {
             <Route exact path="/cart" element={<Cart/>}/>
             <Route exact path="/checkout" element={<Checkout/>}/>
           </Routes>
-
+          <Loader/>
         </BrowserRouter>
       </CartProvider>
     </div>
