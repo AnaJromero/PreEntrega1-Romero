@@ -1,12 +1,10 @@
 import { Menu, MenuButton, MenuList, MenuItem, IconButton, Flex, Spacer, Box, AbsoluteCenter } from '@chakra-ui/react'
 import { HamburgerIcon } from '@chakra-ui/icons';
-import CartWidget from './CartWidget'
 import { Link } from 'react-router-dom';
+import CartWidget from './CartWidget'
 
 const Navbar = () => {
-
   return (
-
     <Flex className='containerNavBar'>
       <Box >
         <Menu >
@@ -33,11 +31,6 @@ const Navbar = () => {
                 Hamburguesas 
               </Link>
             </MenuItem>
-            <MenuItem>
-              <Link to={`/contacto`}>
-                Contacto
-              </Link>
-            </MenuItem>
           </MenuList>
         </Menu>
       </Box>
@@ -45,19 +38,18 @@ const Navbar = () => {
       <Spacer>
         <Box position='relative' h='100px'>
           <AbsoluteCenter>
-          <Link to={"/"}>
-                <img className='logo'  src="../src/assets/FoodTruck.jpg" />
-          </Link>
+            <Link to={"/"}>
+                  <img className='logo'  src="../src/assets/FoodTruck.jpg" />
+            </Link>
           </AbsoluteCenter>
         </Box>
-        
       </Spacer>
+
         <Box> 
           <CartWidget/>
         </Box>
-         
     </Flex>
-  )
-}
+  );
+};
 
-export default Navbar
+export default Navbar;

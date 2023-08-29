@@ -2,22 +2,19 @@ import React, { useEffect, useState } from 'react'
 import { Spinner, Center } from '@chakra-ui/react';
 
 const Loader = () => {
-
-    const [isLoading, setIsLoading] = useState(true);
-  
     useEffect(() => {
-      const timeout = setTimeout(() => {
+      const loadingTimeout = setTimeout(() => {
         setIsLoading(false);
       }, 5000);
   
       return () => {
-        clearTimeout(timeout);
+        clearTimeout(loadingTimeout);
       };
     }, []);
   
-    return (
-      <>
-        {isLoading && (
+    const [isLoading, setIsLoading] = useState(true);
+
+    return isLoading ? (
           <Center
             position="fixed"
             top={0}
@@ -29,9 +26,7 @@ const Loader = () => {
           >
             <Spinner size="xl" />
           </Center>
-        )}
-      </>
-    );
-  }; 
+        ) : null;
+      };
 
-export default Loader
+export default Loader;

@@ -2,58 +2,53 @@ import React, { useContext, useState } from 'react'
 import { CartContext } from '../contex/CartContext';
 import { addDoc, collection, getFirestore } from 'firebase/firestore';
 import {useForm} from 'react-hook-form';
-import { Card } from 'react-bootstrap';
 import { Button, AlertIcon, Alert, AlertTitle, AlertDescription } from '@chakra-ui/react';
 
 const Checkout = () => {
     const [pedidoId, setPredidoId] = useState("");
     const { carrito, vaciarCarrito, precioTotal, eliminarDelCarrito} = useContext(CartContext);
     const { register, handleSubmit} = useForm();
+    
     const comprar = (data) => {
         const pedido = {
             cliente: data,
             productos: carrito,
             total: precioTotal()
         }
-        console.log(pedido);
-        const db = getFirestore()
-        const pedidoRef = collection(db, "Carrito");
+    const db = getFirestore()
+    const pedidoRef = collection(db, "Carrito");
 
-        addDoc(pedidoRef,pedido)
-            .then((doc) =>{
-                setPredidoId(doc.id);
-                vaciarCarrito();
-                console.log(setPredidoId);
-        })
-    }
-
+    addDoc(pedidoRef,pedido)
+        .then((doc) =>{
+            setPredidoId(doc.id);
+            vaciarCarrito();
+        });
+    };
 
     if (pedidoId){
         return(
-
             <div   className='mensaje'>
-            <Alert
-          
-  status='success'
-  variant='subtle'
-  flexDirection='column'
-  justifyContent='center'
-  textAlign='center'
-  height='200px'
-  width='300px'
->
-  <AlertIcon boxSize='40px' mr={0} />
-  <AlertTitle mt={4} mb={1} fontSize='lg'>
-    Su Compra fue exitosa
-  </AlertTitle>
-  <AlertDescription maxWidth='sm'>
-  Tu numero de pedido es: {pedidoId}
-  </AlertDescription>
-</Alert>
-</div>
+                <Alert
+                    status='success'
+                    variant='subtle'
+                    flexDirection='column'
+                    justifyContent='center'
+                    textAlign='center'
+                    height='200px'
+                    width='300px'
+                >
+                    <AlertIcon boxSize='40px' mr={0} />
+                    <AlertTitle mt={4} mb={1} fontSize='lg'>
+                        Su Compra fue exitosa
+                    </AlertTitle>
+                    <AlertDescription maxWidth='sm'>
+                        Tu numero de pedido es: {pedidoId}
+                    </AlertDescription>
+                </Alert>
+            </div>
+        );
+    };
 
-        )
-    }
   return (
     <div className='contenedor-form' >
         <h1>Finalizar Compra</h1>
@@ -70,13 +65,7 @@ const Checkout = () => {
             <Button className='comprar' colorScheme='teal' variant='solid' type='submit'>Comprar</Button>
         </form>
     </div>
-  )
-}
+    );
+};
 
-export default Checkout
-
-{/* <div className='container-form' >
-<h1>Gracias por tu compra</h1>
-<p>Tu numero de pedido es: </p>
-<p> {pedidoId}</p>
-</div> */}
+export default Checkout;
