@@ -39,7 +39,7 @@ const Navbar = () => {
         <Box position='relative' h='100px'>
           <AbsoluteCenter>
             <Link to={"/"}>
-                  <img className='logo'  src="../src/assets/FoodTruck.jpg" />
+                  <img className='logo'  src="../src/assets/foodtruck.png" />
             </Link>
           </AbsoluteCenter>
         </Box>

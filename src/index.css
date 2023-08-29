@@ -48,14 +48,12 @@ h2{
 }
 
 .logo{
-    width: 12vw;
-    height: 13vh; 
-
+    width: 10vw;
+    height: 20vh; 
 }
 
 .menu{
     margin-top: 1.5rem;
-
 }
 
 .contenedor{
@@ -96,7 +94,6 @@ input{
     margin: 1rem;
     width: 70%;
     text-align: center;
-
 }
 .mensaje{
     margin-left: 40%;
@@ -115,7 +112,6 @@ input{
 
 .contador-numero{
     margin: 1rem;
-
 }
 
 .agregar{
